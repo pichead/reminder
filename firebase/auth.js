@@ -62,8 +62,8 @@ const authState = async () => {
 
 const authSignOut = async () => {
     try {
-        const getSignout = await signOut(auth)
-        return getSignout
+        await signOut(auth)
+        return "sign out";
     } catch (error) {
         console.log(error);
         return null;

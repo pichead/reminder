@@ -40,7 +40,14 @@ export default function Home() {
     event.preventDefault();
     const signin = await signinUser(Email,Password)
 
-    console.log(signin)
+    if(signin && signin.user.uid){
+      location.reload()
+    }
+    else{
+      alert("error")
+      setEmail("")
+      setPassword("")
+    }
 
   };
 

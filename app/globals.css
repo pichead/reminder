@@ -1,7 +1,13 @@
-/* @tailwind base;
-@tailwind components; */
+/* @tailwind base; */
+@tailwind components;
 @tailwind utilities;
 
+a:link {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
 
 .custom-loader {
     width: 60px;
