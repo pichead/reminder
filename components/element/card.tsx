@@ -13,6 +13,7 @@ import ModalCardRemove from './modalcardremove';
 import Modal from '@mui/material/Modal';
 import TextField from '@mui/material/TextField';
 import Textarea from '@mui/joy/Textarea';
+import { Diversity1 } from '@mui/icons-material';
 
 const style = {
   position: 'absolute' as 'absolute',
@@ -32,7 +33,7 @@ const Carditems = (props: any) => {
   return (
     <React.Fragment>
 
-      <div className="d-flex align-items-start flex-column border rounded p-3 my-2 " style={{ maxHeight: 270,minHeight: 270  }}>
+      <div className="d-flex align-items-start flex-column border rounded p-3 my-2 " style={{ maxHeight: 270, minHeight: 270 }}>
         <div className='w-100'>
           <div className=" text-truncate">
             {data.name}
@@ -40,10 +41,20 @@ const Carditems = (props: any) => {
           <hr />
         </div>
 
-        <Typography variant="body2" className='mb-auto' color="text.secondary " >
-          {data.des.substring(0, 150)}{data.des.length > 150 ? "..." : ""}
-        </Typography>
-        <hr/>
+        <div
+          className='mb-auto'
+          style={{
+            fontSize: '12px',
+            whiteSpace: 'pre-wrap',
+            overflowWrap: 'break-word',
+            wordBreak: 'break-all',
+            maxWidth: '200px',
+          }}
+        >
+          {data.des.substring(0, 100)}{data.des.length > 100 ? '...' : ''}
+        </div>
+
+        <hr />
         <div className="w-100 d-flex justify-content-between">
           <ModalCard data={data.des} />
           <ModalCardRemove data={data.id} />

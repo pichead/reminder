@@ -29,9 +29,8 @@ export default function Home() {
           <div className='row'>
             {cardData?.map((d: any,i:any) => (
 
-              <div key={i} className='col-md-2'>
+              <div key={i} className='col-xs-6 col-sm-12 col-md-4 col-lg-3 col-xl-2'>
                 <Carditems data={d} />
-
               </div>
             ))
             }
