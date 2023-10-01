@@ -24,7 +24,7 @@ import {
 // สร้าง (เพิ่ม) ข้อมูล
 async function addDocument(data) {
   try {
-    const docRef = await addDoc(collection(db, "card"), data);
+    const docRef = await addDoc(collection(db, "card"), {...data,isActive:true});
     console.log("เพิ่มเอกสารสำเร็จ ID: ", docRef.id);
     return docRef.id;
   } catch (error) {
