@@ -6,7 +6,7 @@ import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
 import TextField from '@mui/material/TextField';
 import Textarea from '@mui/joy/Textarea';
-
+import {addDocument} from "@/firebase/firestore"
 const style = {
     position: 'absolute' as 'absolute',
     top: '50%',
@@ -20,18 +20,21 @@ const style = {
 };
 
 function Addcard() {
-
+    const [Name, setName] = useState<string>("")
+    const [Des, setDes] = useState<string>("")
     const [open, setOpen] = useState(false);
     const handleOpen = () => setOpen(true);
     const handleClose = () => setOpen(false);
 
-    const handleSubmit = (e:React.FormEvent<HTMLFormElement>) => {
-       e.preventDefault();
+    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+        e.preventDefault();
+        const addData = await addDocument({name:Name,des:Des,createDate: Math.floor( Date.now() / 1000)})
+        console.log(addData)
     }
 
     return (
         <React.Fragment>
-            <button onClick={handleOpen} className=' hover:bg-emerald-900 btn bg-emerald-600 text-white '>Create</button>
+            <button onClick={handleOpen} className='btn btn-sm btn-success'>Create</button>
             <Modal
                 open={open}
                 onClose={handleClose}
@@ -47,11 +50,14 @@ function Addcard() {
                             <TextField
                                 label="Name"
                                 size="small"
-
+                                value={Name}
+                                onChange={(e) => setName(e.target.value)}
                             />
                             <br />
                             <br />
-                            <Textarea size="md" name="Size" placeholder='Text here..' maxRows={5} minRows={5} />
+                            <Textarea size="md" name="Size" placeholder='Text here..' maxRows={5} minRows={5}
+                                value={Des}
+                                onChange={(e) => setDes(e.target.value)} />
                         </Typography>
                         <br />
                         <div className='d-flex justify-end'>

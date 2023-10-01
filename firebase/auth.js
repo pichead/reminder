@@ -44,6 +44,7 @@ const authState = async () => {
   try {
     const user = await new Promise((resolve) => {
       const unsubscribe = onAuthStateChanged(auth, (user) => {
+        console.log("user : ",user)
         unsubscribe();
         resolve(user);
       });
