@@ -72,7 +72,7 @@ async function getAllDocuments() {
   }
 }
 
-async function updateDocument(docId) {
+async function updateRemove(docId) {
   try {
     const docRef = doc(db, "card", docId);
     await updateDoc(docRef, { isActive: false });
@@ -108,7 +108,7 @@ async function deleteDocument(docId) {
 export {
   addDocument,
   readDocument,
-  updateDocument,
+  updateRemove,
   deleteDocument,
   getAllDocuments,
   updateData

@@ -11,7 +11,7 @@ import Box from '@mui/material/Box';
 import Modal from '@mui/material/Modal';
 import TextField from '@mui/material/TextField';
 import Textarea from '@mui/joy/Textarea';
-import {updateDocument} from "@/firebase/firestore"
+import {updateRemove} from "@/firebase/firestore"
 
 const style = {
     position: 'absolute',
@@ -32,7 +32,7 @@ const ModalCardRemove = (prop:any) => {
     const handleClose = () => setOpen(false);
 
     const handleRemove = async () => {
-      const remove:any = await updateDocument(id)
+      const remove:any = await updateRemove(id)
 
       if(remove){
         location.reload();
