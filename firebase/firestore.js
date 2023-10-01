@@ -57,7 +57,7 @@ async function getAllDocuments() {
         collection(db, "card"),
         where("isActive", "==", true), // เพิ่มเงื่อนไขที่ต้องการ
         orderBy("createDate", "desc"),
-        limit(100)
+        limit(20)
       )
     );
     const data = [];
