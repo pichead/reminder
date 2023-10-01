@@ -13,7 +13,7 @@ const style = {
     left: '50%',
     transform: 'translate(-50%, -50%)',
     width: 400,
-    bgcolor: 'background.paper',
+    // bgcolor: 'background.paper',
     border: '2px solid #000',
     boxShadow: 24,
     p: 4,
@@ -43,7 +43,7 @@ function Addcard() {
                 aria-labelledby="modal-modal-title"
                 aria-describedby="modal-modal-description"
             >
-                <Box sx={style}>
+                <Box sx={style} className=" bg-indigo-900 text-white">
                     <form onSubmit={handleSubmit}>
                         <Typography id="modal-modal-title" variant="h6" component="h2">
                             Create New!
@@ -54,12 +54,31 @@ function Addcard() {
                                 size="small"
                                 value={Name}
                                 onChange={(e) => setName(e.target.value)}
+                                style={{
+                                    backgroundColor: "rgb(79 70 229 / 1)"
+                                }}
+                                InputProps={{
+                                    style: {
+                                        color: "white"
+                                    }
+                                }}
                             />
                             <br />
                             <br />
-                            <Textarea size="md" name="Size" placeholder='Text here..' maxRows={5} minRows={5}
+                            <Textarea 
+                                size="md" 
+                                name="Size" 
+                                placeholder='Text here..' 
+                                maxRows={5} 
+                                minRows={5}
                                 value={Des}
-                                onChange={(e) => setDes(e.target.value)} />
+                                onChange={(e) => setDes(e.target.value)} 
+                                style={{
+                                    backgroundColor: "rgb(79 70 229 / 1)",
+                                    color:"white"
+                                }}
+
+                                />
                         </Typography>
                         <br />
                         <div className='d-flex justify-end'>

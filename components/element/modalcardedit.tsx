@@ -20,7 +20,7 @@ const style = {
   transform: 'translate(-50%, -50%)',
   minWidth: '40vh', // Adjust the width as needed
   maxHeight: '90vh', // Adjust the maximum height as needed
-  backgroundColor: 'white',
+  // backgroundColor: 'white',
   border: '2px solid #000',
   boxShadow: 24,
   p: 4,
@@ -53,19 +53,32 @@ const ModalCardEdit = (prop: any) => {
         onClose={handleClose}
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
+        className=''
       >
-        <Box sx={style} className="overflow-y-auto">
+        <Box sx={style} className="overflow-y-auto  bg-indigo-900 text-white">
           <TextField
             label="Name"
             size="small"
             value={name}
             onChange={(e) => setName(e.target.value)}
+            style={{
+              backgroundColor: "rgb(79 70 229 / 1)"
+          }}
+          InputProps={{
+              style: {
+                  color: "white"
+              }
+          }}
           />
           <br />
           <br />
           <Textarea size="md" name="Size" placeholder='Text here..' maxRows={5} minRows={5}
             value={des}
-            onChange={(e) => setDes(e.target.value)} />
+            onChange={(e) => setDes(e.target.value)} 
+            style={{
+              backgroundColor: "rgb(79 70 229 / 1)",
+              color:"white"
+          }}/>
           <div className='d-flex justify-between mt-3'>
             <button className='btn btn-sm btn-danger mx-2' onClick={handleEdit} type='button'>Save</button>
             <button className='btn btn-sm btn-secondary  mx-2' onClick={handleClose} type='button'>Cancel</button>

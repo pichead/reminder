@@ -9,6 +9,11 @@ a:hover {
   text-decoration: none;
 }
 
+
+body {
+  background-color: #2a303b;
+}
+
 .custom-loader {
     width: 60px;
     height: 60px;

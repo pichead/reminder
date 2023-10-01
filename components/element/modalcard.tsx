@@ -17,9 +17,8 @@ const style = {
     top: '50%',
     left: '50%',
     transform: 'translate(-50%, -50%)',
-    // minWidth: '50vh', // Adjust the width as needed
+    maxWidth: '90%', // Adjust the width as needed
     maxHeight: '90vh', // Adjust the maximum height as needed
-    backgroundColor: 'white',
     border: '2px solid #000',
     boxShadow: 24,
     p: 4,
@@ -31,16 +30,16 @@ const ModalCard = (prop:any) => {
     const handleClose = () => setOpen(false);
     return (
         <React.Fragment>
-          <Button size="small" onClick={() => setOpen(true)}>
-            Read more
-          </Button>
+          <button className='btn btn-sm bg-teal-900 hover:bg-emerald-600 text-white ' onClick={() => setOpen(true)}>
+            View
+          </button>
           <Modal
             open={open}
             onClose={handleClose}
             aria-labelledby="modal-modal-title"
             aria-describedby="modal-modal-description"
           >
-            <Box sx={style} className="overflow-y-auto">
+            <Box sx={style}  className="overflow-y-auto  bg-indigo-900 text-white">
               <pre style={{ whiteSpace: 'pre-wrap' }}>{data}</pre>
             </Box>
           </Modal>

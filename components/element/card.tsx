@@ -34,7 +34,7 @@ const Carditems = (props: any) => {
   return (
     <React.Fragment>
 
-      <div className="d-flex align-items-start flex-column border rounded p-3 my-2 " style={{ maxHeight: 270, minHeight: 270 }}>
+      <div className="d-flex align-items-start flex-column border rounded p-3 my-2 bg-indigo-900 text-white" style={{ maxHeight: 270, minHeight: 270 }}>
         <div className='w-100'>
           <div className=" text-truncate">
             {data.name}

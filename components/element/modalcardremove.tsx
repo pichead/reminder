@@ -20,7 +20,7 @@ const style = {
     transform: 'translate(-50%, -50%)',
     // minWidth: '50vh', // Adjust the width as needed
     maxHeight: '90vh', // Adjust the maximum height as needed
-    backgroundColor: 'white',
+    // backgroundColor: 'white',
     border: '2px solid #000',
     boxShadow: 24,
     p: 4,
@@ -51,7 +51,7 @@ const ModalCardRemove = (prop:any) => {
             aria-labelledby="modal-modal-title"
             aria-describedby="modal-modal-description"
           >
-            <Box sx={style} className="overflow-y-auto">
+            <Box sx={style} className="overflow-y-auto  bg-indigo-900 text-white">
               ยืนยันการลบหรือไม่
               <div className='d-flex justify-between mt-3'>
                 <button className='btn btn-sm btn-danger mx-2' onClick={handleRemove} type='button'>Confirm</button>
