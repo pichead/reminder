@@ -29,7 +29,9 @@ function Addcard() {
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         const addData = await addDocument({name:Name,des:Des,createDate: Math.floor( Date.now() / 1000)})
-        console.log(addData)
+        if (addData) {
+            location.reload();
+          }
     }
 
     return (
