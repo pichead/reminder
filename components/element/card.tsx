@@ -14,6 +14,7 @@ import Modal from '@mui/material/Modal';
 import TextField from '@mui/material/TextField';
 import Textarea from '@mui/joy/Textarea';
 import { Diversity1 } from '@mui/icons-material';
+import ModalCardEdit from './modalcardedit';
 
 const style = {
   position: 'absolute' as 'absolute',
@@ -57,6 +58,7 @@ const Carditems = (props: any) => {
         <hr />
         <div className="w-100 d-flex justify-content-between">
           <ModalCard data={data.des} />
+          <ModalCardEdit data={data}/>
           <ModalCardRemove data={data.id} />
         </div>
       </div>
