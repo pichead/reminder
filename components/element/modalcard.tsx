@@ -17,7 +17,6 @@ const style = {
     top: '50%',
     left: '50%',
     transform: 'translate(-50%, -50%)',
-    maxWidth: '90%', // Adjust the width as needed
     maxHeight: '90vh', // Adjust the maximum height as needed
     border: '2px solid #000',
     boxShadow: 24,
@@ -39,7 +38,13 @@ const ModalCard = (prop:any) => {
             aria-labelledby="modal-modal-title"
             aria-describedby="modal-modal-description"
           >
-            <Box sx={style}  className="overflow-y-auto  bg-indigo-900 text-white">
+            <Box sx={style}  className="overflow-y-auto  bg-indigo-900 text-white col-10 col-md-6"           style={{
+            fontSize: '18px',
+            whiteSpace: 'pre-wrap',
+            overflowWrap: 'break-word',
+            wordBreak: 'break-all',
+            // maxWidth: '200px',
+          }}>
               <pre style={{ whiteSpace: 'pre-wrap' }}>{data}</pre>
             </Box>
           </Modal>

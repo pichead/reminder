@@ -49,7 +49,6 @@ const Carditems = (props: any) => {
             whiteSpace: 'pre-wrap',
             overflowWrap: 'break-word',
             wordBreak: 'break-all',
-            maxWidth: '200px',
           }}
         >
           {data.des.substring(0, 100)}{data.des.length > 100 ? '...' : ''}
