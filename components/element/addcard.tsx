@@ -12,7 +12,7 @@ const style = {
     top: '50%',
     left: '50%',
     transform: 'translate(-50%, -50%)',
-    width: 400,
+    // width: 400,
     // bgcolor: 'background.paper',
     border: '2px solid #000',
     boxShadow: 24,
@@ -43,9 +43,9 @@ function Addcard() {
                 aria-labelledby="modal-modal-title"
                 aria-describedby="modal-modal-description"
             >
-                <Box sx={style} className=" bg-indigo-900 text-white">
+                <Box sx={style} className=" bg-indigo-900 text-white col-10 col-md-6 col-lg-4">
                     <form onSubmit={handleSubmit}>
-                        <Typography id="modal-modal-title" variant="h6" component="h2">
+                        <Typography id="modal-modal-title" variant="h6" component="h2" >
                             Create New!
                         </Typography>
                         <Typography id="modal-modal-description" sx={{ mt: 2 }}>
@@ -53,6 +53,7 @@ function Addcard() {
                                 label="Name"
                                 size="small"
                                 value={Name}
+                                className='col-12'
                                 onChange={(e) => setName(e.target.value)}
                                 style={{
                                     backgroundColor: "rgb(79 70 229 / 1)"

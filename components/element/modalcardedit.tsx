@@ -18,8 +18,8 @@ const style = {
   top: '50%',
   left: '50%',
   transform: 'translate(-50%, -50%)',
-  minWidth: '40vh', // Adjust the width as needed
-  maxHeight: '90vh', // Adjust the maximum height as needed
+  // minWidth: '40vh', // Adjust the width as needed
+  // maxHeight: '90vh', // Adjust the maximum height as needed
   // backgroundColor: 'white',
   border: '2px solid #000',
   boxShadow: 24,
@@ -55,12 +55,13 @@ const ModalCardEdit = (prop: any) => {
         aria-describedby="modal-modal-description"
         className=''
       >
-        <Box sx={style} className="overflow-y-auto  bg-indigo-900 text-white">
+        <Box sx={style} className="overflow-y-auto col-10 col-md-6  col-lg-4 bg-indigo-900 text-white">
           <TextField
             label="Name"
             size="small"
             value={name}
             onChange={(e) => setName(e.target.value)}
+            className='col-12'
             style={{
               backgroundColor: "rgb(79 70 229 / 1)"
           }}

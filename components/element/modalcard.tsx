@@ -38,7 +38,7 @@ const ModalCard = (prop:any) => {
             aria-labelledby="modal-modal-title"
             aria-describedby="modal-modal-description"
           >
-            <Box sx={style}  className="overflow-y-auto  bg-indigo-900 text-white col-10 col-md-6"           style={{
+            <Box sx={style}  className="overflow-y-auto  bg-indigo-900 text-white col-10 col-md-6 col-lg-4"           style={{
             fontSize: '18px',
             whiteSpace: 'pre-wrap',
             overflowWrap: 'break-word',
