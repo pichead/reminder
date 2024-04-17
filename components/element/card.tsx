@@ -1,5 +1,5 @@
 
-import React from 'react'
+import React, { ReactEventHandler } from 'react'
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
@@ -30,8 +30,9 @@ const style = {
 
 const Carditems = (props: any) => {
   const data = props.data
-  console.log("data");
-  return (
+  
+
+    return (
     <React.Fragment>
 
       <div className="d-flex align-items-start flex-column border rounded p-3 my-2 bg-indigo-900 text-white" style={{ maxHeight: 270, minHeight: 270 }}>
@@ -56,7 +57,7 @@ const Carditems = (props: any) => {
 
         <hr />
         <div className="w-100 d-flex justify-content-between">
-          <ModalCard data={data.des} />
+          <ModalCard id={"view_"+data.id} data={data.des} />
           <ModalCardEdit data={data}/>
           <ModalCardRemove data={data.id} />
         </div>
