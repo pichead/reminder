@@ -44,18 +44,18 @@ const Carditems = (props: any) => {
         </div>
 
         <div
-          className='mb-auto'
+          className='mb-auto overflow-hidden'
           style={{
             fontSize: '12px',
             whiteSpace: 'pre-wrap',
             overflowWrap: 'break-word',
             wordBreak: 'break-all',
+            height:'180px'
           }}
         >
-          {data.des.substring(0, 100)}{data.des.length > 100 ? '...' : ''}
+          {data.des}
         </div>
-
-        <hr />
+        <br/>
         <div className="w-100 d-flex justify-content-between">
           <ModalCard id={"view_"+data.id} data={data.des} />
           <ModalCardEdit data={data}/>
